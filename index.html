@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Bubbles Project - Page</title>
+  </head>
+  <body>
+    <section>
+      <h2>Daniela Fehlow</h2>
+      <img src="./image/ffe7ac48-eb85-4096-bcaf-99484d5df3c1.jfif" alt="" />
+    </section>
+    <script type="text/javascript">
+      function createBolhas() {
+        const section = document.querySelector("section");
+        const createElement = document.createElement("span");
+        var size = Math.random() * 60;
+
+        createElement.style.width = 20 + size + "px";
+        createElement.style.height = 20 + size + "px";
+        createElement.style.left = Math.random() * innerWidth + "px";
+        section.appendChild(createElement);
+
+        setTimeout(() => {
+          createElement.remove();
+        }, 4000);
+      }
+      setInterval(createBolhas, 50);
+    </script>
+  </body>
+</html>
